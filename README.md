@@ -8,3 +8,6 @@ E' inoltre disponibile il Trailer del documentario.
 Sito web realizzato con:
 * Boostratp: https://github.com/twbs/bootstrap
 * Greyscale: https://github.com/BlackrockDigital/startbootstrap-grayscale
+* Font Awesome: https://github.com/FortAwesome/Font-Awesome
+* JQuery: https://github.com/jquery/jquery
+* JQuery Easing: https://github.com/gdsmith/jquery.easing
