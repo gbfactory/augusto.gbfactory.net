@@ -6,5 +6,5 @@ Il sito web contiene informazioni sul documentario, sugli eventi passati e futur
 E' inoltre disponibile il Trailer del documentario.
 
 Sito web realizzato con:
-Boostratp: https://github.com/twbs/bootstrap
-Greyscale: https://github.com/BlackrockDigital/startbootstrap-grayscale
+* Boostratp: https://github.com/twbs/bootstrap
+* Greyscale: https://github.com/BlackrockDigital/startbootstrap-grayscale
