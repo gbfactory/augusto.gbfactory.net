@@ -1,0 +1,28 @@
+baseURL = "https://augusto.gbfactory.net/"
+title = "Augusto: Ateste nell'impero"
+theme = "augusto"
+
+[menu]
+  [[menu.main]]
+    identifier = "trailer"
+    name = "Trailer"
+    url = "#trailer"
+    weight = 100
+
+  [[menu.main]]
+    identifier = "info"
+    name = "Info"
+    url = "#info"
+    weight = 110
+
+  [[menu.main]]
+    identifier = "eventi"
+    name = "Eventi"
+    url = "#eventi"
+    weight = 120
+
+  [[menu.main]]
+    identifier = "contatti"
+    name = "Contatti"
+    url = "#contatti"
+    weight = 130

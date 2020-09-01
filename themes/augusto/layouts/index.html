@@ -1,0 +1,144 @@
+{{ define "main" }}
+<!-- Header -->
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <img
+        src="https://augusto.gbfactory.net/old/assets/img/logo.png"
+        alt=""
+        class="img-fluid"
+      />
+      <!--<h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>-->
+      <a href="#about" class="btn btn-primary js-scroll-trigger"
+        >scopri di più</a
+      >
+    </div>
+  </div>
+</header>
+
+<!-- trailer -->
+<section id="trailer" class="trailer-section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2 class="text-white mb-4">
+          ASPETTANDO 
+          <span class="text-yellow">AUGUSTO</span>
+        </h2>
+        <p class="text-white">
+          Guarda il trailer del documentario con scene esclusive dal dietro le quinte!
+        </p>
+
+        <img
+          class="img-fluid mb-3 mb-lg-0"
+          src="https://res.cloudinary.com/gbfactory/image/upload/v1598895221/Augusto/augusto_play_trailer_ppg0of.jpg"
+          alt=""
+          id="playtrailer"
+        />
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- info -->
+<section id="info" class="about-section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Augusto: Ateste nell'impero</h2>
+        <p class="text-white-50">
+          Documentario storico sulla figura dell'imperatore romano Augusto e i
+          suoi legami con la città di Este, al tempo Ateste.
+        </p>
+        <table class="table table-borderlesss text-white">
+          <tr>
+            <td><b>Regia</b></td>
+            <td>Giacomo Brochin</td>
+          </tr>
+          <tr>
+            <td><b>Presentato da</b></td>
+            <td>Sofia Greggio</td>
+          </tr>
+          <tr>
+            <td><b>Fotografia</b></td>
+            <td>Davide Bortoletto</td>
+          </tr>
+          <tr>
+            <td><b>Fotografia</b></td>
+            <td>Edoardo Veronese</td>
+          </tr>
+          <tr>
+            <td><b>Edizione</b></td>
+            <td>Elena Rimondo</td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+    <img src="img/estecastello.png" class="img-fluid" alt="" />
+  </div>
+</section>
+
+<!-- galleria -->
+<section id="eventi" class="projects-section bg-scuro">
+  <div class="container">
+
+    <div class="text-white text-center font-weight-bold">
+      <h2>EVENTI</h2>
+    </div>
+
+    {{ $counter := 0 }}
+    {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{if not (modBool $counter 2)}}
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="{{.Params.image | absURL }}" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white"><a href="{{ .Permalink }}">{{- .Title -}}</a></h4>
+                  <p class="mb-0 text-white">
+                    <small><time>{{ .Date.Format "2 January 2006" }}</time></small>
+                  </p>
+                  <p class="mb-0 text-white-50">
+                    {{ .Description }}
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ else }}
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white"><a href="{{ .Permalink }}">{{- .Title -}}</a></h4>
+                  <p class="mb-0 text-white">
+                    <small><time>{{ .Date.Format "2 January 2006" }}</time></small>
+                  </p>
+                  <p class="mb-0 text-white-50">
+                    {{ .Description }}
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" src="{{.Params.image | absURL }}" alt="" />
+          </div>
+        </div>
+      {{ end }}
+      {{ $counter = add $counter 1 }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
