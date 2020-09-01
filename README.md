@@ -1,13 +1,9 @@
-# Sito web augusto.gbfactory.net
+# Sito Web Augusto: Ateste nell'impero
 
-## Sito web del documentario Augusto: Ateste nell'impero
-
-Il sito web contiene informazioni sul documentario, sugli eventi passati e futuri.
-E' inoltre disponibile il Trailer del documentario.
+Portale Web del documentario storico "Augusto: Ateste nell'impero". Il sito web contiene informazioni sul documentario e sugli eventi passati e futuri con relative foto. Inoltre è possibile visualizzare il trailer del documentario "Aspettando... Augusto" con scende dal backstage.
 
 Sito web realizzato con:
-* Boostratp: https://github.com/twbs/bootstrap
-* Greyscale: https://github.com/BlackrockDigital/startbootstrap-grayscale
-* Font Awesome: https://github.com/FortAwesome/Font-Awesome
-* JQuery: https://github.com/jquery/jquery
-* JQuery Easing: https://github.com/gdsmith/jquery.easing
+* [Hugo](https://gohugo.io/)
+* [Boostratp](https://github.com/twbs/bootstrap)
+* [Greyscale](https://github.com/BlackrockDigital/startbootstrap-grayscale)
+* [JQuery](https://github.com/jquery/jquery)
