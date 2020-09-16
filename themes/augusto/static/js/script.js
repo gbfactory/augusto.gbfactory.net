@@ -28,11 +28,30 @@
     $(".navbar-collapse").collapse("hide");
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $("body").scrollspy({
-    target: "#mainNav",
-    offset: 100,
-  });
+  // Aggiunge la classe active ai tasti della navbar alla sezione corrispondente mentre si scorre
+  // https://stackoverflow.com/questions/30348314/how-to-use-scrollspy-without-using-bootstrap
+  $(window).bind('scroll', function() {
+    let currentTop = $(window).scrollTop();
+    let elems = $('.scrollspy');
+
+    elems.each(function(index) {
+      let elemTop = $(this).offset().top;
+      let elemBottom = elemTop + $(this).height();
+
+      if (currentTop >= elemTop && currentTop <= elemBottom) {
+        let id = $(this).attr('id');
+        let navElem = $('a[href="/#' + id+ '"]');
+        navElem.parent().addClass('active').siblings().removeClass( 'active' );
+      }
+    })
+
+    // fix per il tasto contatti
+    // https://stackoverflow.com/questions/3898130/check-if-a-user-has-scrolled-to-the-bottom
+    if (currentTop + $(window).height() > $(document).height() - 100) {
+      let navElem = $('a[href="/#contatti"]');
+      navElem.parent().addClass('active').siblings().removeClass( 'active' );
+    }
+  }); 
 
   // Collapse Navbar
   var navbarCollapse = function () {

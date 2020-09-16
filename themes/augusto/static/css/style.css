@@ -67,7 +67,6 @@
   #mainNav.navbar-shrink .nav-link {
     color: #fff;
     padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: #ffc107;
@@ -75,7 +74,7 @@
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
-  #mainNav.navbar-shrink .nav-link.active {
+  #mainNav.navbar-shrink .navbar-item.active .nav-link {
     color: #ffc107;
     outline: none;
     border-bottom: 0.25rem solid #ffc107;
