@@ -4,25 +4,31 @@ theme = "augusto"
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 90
+
+  [[menu.main]]
     identifier = "trailer"
     name = "Trailer"
-    url = "#trailer"
+    url = "/#trailer"
     weight = 100
 
   [[menu.main]]
     identifier = "info"
     name = "Info"
-    url = "#info"
+    url = "/#info"
     weight = 110
 
   [[menu.main]]
     identifier = "eventi"
     name = "Eventi"
-    url = "#eventi"
+    url = "/#eventi"
     weight = 120
 
   [[menu.main]]
     identifier = "contatti"
     name = "Contatti"
-    url = "#contatti"
+    url = "/#contatti"
     weight = 130
