@@ -403,3 +403,42 @@ footer {
   height: 74px;
 }
 
+/* Img fix */
+img {
+  max-width: 100%;
+}
+
+/* Evento Pagina singola */
+.banner-desc {
+  margin-top: .5rem;
+}
+
+.event-post {
+  background: #161616;
+  padding: 8rem 0;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+}
+
+.event-left {
+  padding: 2rem;
+  border-left: 3px solid #ffc107;
+  border-top: 3px solid #ffc107;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+
+.event-meta {
+  padding: 2rem;
+  border-top: 3px solid #ffc107;
+  border-right: 3px solid #ffc107;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+.event-contnet {
+  padding: 2rem;
+}

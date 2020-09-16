@@ -1,7 +1,29 @@
 {{ define "main" }}
-<div class="container">
-  <h1>{{ .Title | markdownify}}</h1>
+<div class="event-post">
+  <div class="container">
+    <div class="event-grid">
 
-  {{ .Content }}
+      <div class="event-left">
+        <a href="{{.Params.banner | absURL }}">
+          <img src="{{.Params.banner | absURL }}" alt="{{ .Title }}">
+          <p class="text-white-50 banner-desc"><i>Clicca per ingrandire la locandina</i></p>
+        </a>
+      </div>
+
+      <div class="event-right">
+        <div class="event-meta">
+          <h1 class="text-primary">{{ .Title | markdownify}}</h1>
+          <time class="post-date text-white" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2 January 2006" }}</time>
+          <p class="text-white-50">{{ .Description }}</p>
+        </div>
+
+        <div class="event-contnet text-white">
+          {{ .Content }}
+
+          <img src="{{.Params.image | absURL }}" alt="{{ .Title }}">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}
